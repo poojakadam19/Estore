@@ -1,0 +1,62 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to next line */
+    justify-content: space-between; /* Ensures space between items */
+    max-width: 1200px; /* Sets the maximum width for the container */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 15px; /* Adds padding to avoid items touching edges */
+}
+
+.product-card {
+    flex: 0 1 30%; /* Each card takes approximately 30% of the row */
+    margin: 10px; /* Adds space around each card */
+    box-shadow: 3px 1px 14px 0px lightgray;
+    border-radius: 0.6em;
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in the width */
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    img {
+       // width: 100%;
+        max-width: 250px; /* Limits the image width */
+        border-radius: 0.4em;
+    }
+}
+
+.product-info {
+    text-align: center;
+    padding: 1em;
+
+    h5 {
+        font-weight: 700;
+    }
+
+    .product-price {
+        margin: 0;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+}
+
+.product-rating {
+    i {
+        color: gold;
+        font-size: small;
+    }
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .product-card {
+        flex: 0 1 48%; /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 0 1 100%; /* 1 item per row on small screens */
+    }
+}
